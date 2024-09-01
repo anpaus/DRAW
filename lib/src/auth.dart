@@ -235,7 +235,7 @@ abstract class Authenticator {
     final httpClient = http.Client();
     final start = DateTime.now();
     final headers = <String, String>{};
-    headers[_kUserAgentKey] = _config.userAgent!;
+    if (_config.userAgent != null) headers[_kUserAgentKey] = _config.userAgent!;
 
     // Request the token from the server.
     final response = await httpClient.post(
