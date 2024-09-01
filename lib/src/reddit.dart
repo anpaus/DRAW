@@ -407,7 +407,7 @@ class Reddit {
         siteName: siteName);
 
     if (_config.userAgent == null) {
-      throw DRAWAuthenticationError('userAgent cannot be null.');
+      //throw DRAWAuthenticationError('userAgent cannot be null.');
     }
 
     final grant = oauth2.AuthorizationCodeGrant(_config.clientId!,
