@@ -234,9 +234,10 @@ abstract class Authenticator {
 
     final httpClient = http.Client();
     final start = DateTime.now();
+    final String basicAuth =        'Basic ' + base64.encode(utf8.encode('$clientId:$clientSecret'));  
     final headers = <String, String>
     {
-       _kAuthorizationKey: 'Basic ${base64Encode((clientId + ":").codeUnits)})'
+       _kAuthorizationKey: basicAuth
     };
     if (_config.userAgent != null) headers[_kUserAgentKey] = _config.userAgent!;
 
