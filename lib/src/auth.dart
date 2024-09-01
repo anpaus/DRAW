@@ -234,7 +234,7 @@ abstract class Authenticator {
 
     final httpClient = http.Client();
     final start = DateTime.now();
-    final headers = <String, String>{}
+    final headers = <String, String>
     {
        _kAuthorizationKey: 'Basic ${base64Encode((clientId + ":").codeUnits)})'
     };
